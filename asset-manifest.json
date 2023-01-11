@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/static/css/main.eeb4ae37.css",
-    "main.js": "/static/js/main.37698baf.js",
-    "static/js/187.95f34a78.chunk.js": "/static/js/187.95f34a78.chunk.js",
-    "static/js/974.d155baad.chunk.js": "/static/js/974.d155baad.chunk.js",
-    "static/js/883.be3bc40f.chunk.js": "/static/js/883.be3bc40f.chunk.js",
-    "static/js/563.a6d83b5d.chunk.js": "/static/js/563.a6d83b5d.chunk.js",
-    "static/js/942.a97ca010.chunk.js": "/static/js/942.a97ca010.chunk.js",
-    "static/js/787.93b2f50c.chunk.js": "/static/js/787.93b2f50c.chunk.js",
-    "static/js/202.ecca5185.chunk.js": "/static/js/202.ecca5185.chunk.js",
-    "static/js/419.50b17a26.chunk.js": "/static/js/419.50b17a26.chunk.js",
-    "static/js/318.f6b05b1d.chunk.js": "/static/js/318.f6b05b1d.chunk.js",
-    "static/js/252.9ae4b070.chunk.js": "/static/js/252.9ae4b070.chunk.js",
-    "index.html": "/index.html",
-    "main.eeb4ae37.css.map": "/static/css/main.eeb4ae37.css.map",
-    "main.37698baf.js.map": "/static/js/main.37698baf.js.map",
-    "187.95f34a78.chunk.js.map": "/static/js/187.95f34a78.chunk.js.map",
-    "974.d155baad.chunk.js.map": "/static/js/974.d155baad.chunk.js.map",
-    "787.93b2f50c.chunk.js.map": "/static/js/787.93b2f50c.chunk.js.map",
-    "202.ecca5185.chunk.js.map": "/static/js/202.ecca5185.chunk.js.map",
-    "419.50b17a26.chunk.js.map": "/static/js/419.50b17a26.chunk.js.map",
-    "318.f6b05b1d.chunk.js.map": "/static/js/318.f6b05b1d.chunk.js.map",
-    "252.9ae4b070.chunk.js.map": "/static/js/252.9ae4b070.chunk.js.map"
+    "main.css": "/influence-mining-web/static/css/main.eeb4ae37.css",
+    "main.js": "/influence-mining-web/static/js/main.f89fa4f9.js",
+    "static/js/187.95f34a78.chunk.js": "/influence-mining-web/static/js/187.95f34a78.chunk.js",
+    "static/js/974.d155baad.chunk.js": "/influence-mining-web/static/js/974.d155baad.chunk.js",
+    "static/js/883.be3bc40f.chunk.js": "/influence-mining-web/static/js/883.be3bc40f.chunk.js",
+    "static/js/563.a6d83b5d.chunk.js": "/influence-mining-web/static/js/563.a6d83b5d.chunk.js",
+    "static/js/942.a97ca010.chunk.js": "/influence-mining-web/static/js/942.a97ca010.chunk.js",
+    "static/js/787.93b2f50c.chunk.js": "/influence-mining-web/static/js/787.93b2f50c.chunk.js",
+    "static/js/202.ecca5185.chunk.js": "/influence-mining-web/static/js/202.ecca5185.chunk.js",
+    "static/js/419.e398b7c6.chunk.js": "/influence-mining-web/static/js/419.e398b7c6.chunk.js",
+    "static/js/318.f6b05b1d.chunk.js": "/influence-mining-web/static/js/318.f6b05b1d.chunk.js",
+    "static/js/252.9ae4b070.chunk.js": "/influence-mining-web/static/js/252.9ae4b070.chunk.js",
+    "index.html": "/influence-mining-web/index.html",
+    "main.eeb4ae37.css.map": "/influence-mining-web/static/css/main.eeb4ae37.css.map",
+    "main.f89fa4f9.js.map": "/influence-mining-web/static/js/main.f89fa4f9.js.map",
+    "187.95f34a78.chunk.js.map": "/influence-mining-web/static/js/187.95f34a78.chunk.js.map",
+    "974.d155baad.chunk.js.map": "/influence-mining-web/static/js/974.d155baad.chunk.js.map",
+    "787.93b2f50c.chunk.js.map": "/influence-mining-web/static/js/787.93b2f50c.chunk.js.map",
+    "202.ecca5185.chunk.js.map": "/influence-mining-web/static/js/202.ecca5185.chunk.js.map",
+    "419.e398b7c6.chunk.js.map": "/influence-mining-web/static/js/419.e398b7c6.chunk.js.map",
+    "318.f6b05b1d.chunk.js.map": "/influence-mining-web/static/js/318.f6b05b1d.chunk.js.map",
+    "252.9ae4b070.chunk.js.map": "/influence-mining-web/static/js/252.9ae4b070.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.eeb4ae37.css",
-    "static/js/main.37698baf.js"
+    "static/js/main.f89fa4f9.js"
   ]
 }
