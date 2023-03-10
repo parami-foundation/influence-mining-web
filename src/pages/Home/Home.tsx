@@ -1,34 +1,44 @@
-import React from 'react';
-import { Layout } from 'antd';
+import React, { useEffect } from 'react';
+import { Button, Layout } from 'antd';
 import './Home.scss';
+import HomePageHeader from '../../components/HomePageHeader/HomePageHeader';
+import { Outlet, useLocation, useNavigate } from 'react-router-dom';
+import { parseUrlParams } from '../../utils/window.util';
 
-const { Header, Footer, Sider, Content } = Layout;
+const { Content } = Layout;
 
 export interface HomeProps { }
 
 function Home({ }: HomeProps) {
+    const location = useLocation();
+
+    useEffect(() => {
+        const params = parseUrlParams();
+        if (params.oauth_token && params.oauth_verifier) {
+            window.location.href = `${window.location.origin}/#/auth?oauth_token=${params.oauth_token}&oauth_verifier=${params.oauth_verifier}`
+        }
+    }, []);
+
     return <>
-        <Layout>
-            <Header className='page-header'>
-                <div className='header-content'>
-                    <div className='header-logo'>Logo</div>
-                    <div className='header-menu'>
-                        <div className='menu-item'>tab 1</div>
-                        <div className='menu-item'>tab 2</div>
-                        <div className='menu-item'>tab 3</div>
-                    </div>
-                </div>
-            </Header>
-            <Content className='page-content'>
-                <div className='section overview'>
-                    <div className='info'></div>
-                    <div className='image'></div>
-                </div>
-                <div className='section'></div>
-                <div className='section'></div>
-            </Content>
-            <Footer>Parami Foundation</Footer>
-        </Layout>
+        {/* {location.pathname === '/' && <>
+            <Layout>
+                <HomePageHeader />
+                <Content>
+                    <Outlet></Outlet>
+                </Content>
+            </Layout>
+        </>} */}
+        {location.pathname === '/auth' && <>
+            <Outlet></Outlet>
+        </>}
+        {location.pathname !== '/auth' && <>
+            <Layout>
+                <HomePageHeader />
+                <Content>
+                    <Outlet></Outlet>
+                </Content>
+            </Layout>
+        </>}
     </>;
 };
 
