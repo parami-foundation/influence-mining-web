@@ -101,9 +101,14 @@ function Dashboard({ }: DashboardProps) {
         </div>
 
         {claimModal && <>
-            <ClaimAd3Modal onCancel={() => {
-                setClaimModal(false)
-            }}></ClaimAd3Modal>
+            <ClaimAd3Modal
+                onCancel={() => {
+                    setClaimModal(false);
+                }}
+                onSuccess={() => {
+                    setClaimModal(false);
+                }}
+            ></ClaimAd3Modal>
         </>}
     </>;
 };
