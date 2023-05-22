@@ -28,11 +28,12 @@ import { useImAccount } from '../../hooks/useImAccount';
 import { useCommitBid } from '../../hooks/useCommitBid';
 import { useCurBid } from '../../hooks/useCurrentBid';
 import { uploadIPFS } from '../../services/ipfs.service';
+import { useParams, useSearchParams } from 'react-router-dom';
 
 const { Panel } = Collapse;
 const { Option } = Select;
 
-interface BidHNFTProps { }
+interface BidHNFTProps {}
 
 export enum IMAGE_TYPE {
   ICON = 'icon',
@@ -72,6 +73,10 @@ const mockAdData = {
 // const adMetadataUrl = 'https://ipfs.parami.io/ipfs/QmY3ttSmNBbcKPit8mJ1FLatcDDeNDhmkkYU9TnCEJSsjZ';
 
 const BidHNFT: React.FC<BidHNFTProps> = (props) => {
+  let [params] = useSearchParams();
+  // const hnftAddress = param.get('hnftAddress');
+  // const tokenId = param.get('tokenId');
+  // console.info('param', hnftAddress, tokenId);
   const [form] = Form.useForm();
   const { imAccount } = useImAccount();
   const { address } = useAccount();
@@ -98,6 +103,14 @@ const BidHNFT: React.FC<BidHNFTProps> = (props) => {
   const [bidWithSig, setBidWithSig] = useState<BidWithSignature>();
   const { commitBid, isSuccess: commitBidSuccess } = useCommitBid(hnft.tokenId, hnft.address, inputFloatStringToAmount('10'), adMetadataUrl, bidWithSig?.sig, bidWithSig?.prev_bid_id, bidWithSig?.id, bidWithSig?.last_bid_remain);
   const commitBidReady = !!commitBid;
+
+  useEffect(() => {
+    if (params && params.get('hnftAddress') && params.get('tokenId')) {
+        // setTweetGeneratorModal(true);
+    } else {
+      message.error('Invalid URL');
+    }
+}, [params])
 
   useEffect(() => {
     if (bidWithSig && commitBidReady) {
@@ -344,10 +357,10 @@ const BidHNFT: React.FC<BidHNFTProps> = (props) => {
           <div className='title'>Ad Preview</div>
           <div className='content'>
             <div className='header'>
-              <UserAvatar src={''} className='avatar' />
+              <UserAvatar src={iconUploadFiles?.[0]?.url || ''} className='avatar' />
               <div className='sponsor-desc'>
                 <span>is sponsoring this hNFT. </span>
-                <a className='bidLink' href='wwww.baidu.com' target='_blank'>
+                <a className='bidLink' href='#' target='_blank'>
                   Bid on this ad space
                 </a>
               </div>
